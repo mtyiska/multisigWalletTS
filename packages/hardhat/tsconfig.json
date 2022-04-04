@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "declaration": true,
+    "typeRoots": ["node_modules/@types"] /* List of folders to include type definitions from. */,
+    "rootDir": "."
+  },
+  "include": ["./scripts", "./test", "./typechain", "./hardhat.config.ts"],
+  "files": ["./hardhat.config.ts"]
+}

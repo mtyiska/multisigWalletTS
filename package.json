@@ -1,0 +1,29 @@
+{
+    "name": "@scaffold-eth/typescript",
+    "version": "0.2.0",
+    "keywords": [
+        "ethereum",
+        "react",
+        "workspaces",
+        "yarn"
+    ],
+    "private": true,
+    "scripts": {
+        "start": "yarn workspace @scaffold-eth/react-app start",
+        "chain": "yarn workspace @scaffold-eth/hardhat chain",
+        "testcontract": "yarn workspace @scaffold-eth/hardhat test",
+        "deploy": "yarn workspace @scaffold-eth/hardhat deploy",
+        "contracts:build": "yarn workspace @scaffold-eth/hardhat hardhat compile && yarn workspace @scaffold-eth/react-app contracts:external",
+        "contracts:rebuild": "yarn workspace @scaffold-eth/hardhat hardhat clean && yarn contracts:build"
+    },
+    "workspaces": {
+        "packages": [
+            "packages/hardhat",
+            "packages/react-app"
+        ]
+    },
+    "packageManager": "yarn@3.2.0",
+    "dependencies": {
+        "shx": "^0.3.4"
+    }
+}
